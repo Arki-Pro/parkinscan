@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ParkScreen — Parkinson's Biosignal Screening</title>
+<title>ParkScreen - Parkinson's Biosignal Screening</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght::300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ── Reset & Base ── */
+/* -- Reset & Base -- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --bg:        #080D14;
@@ -35,7 +35,7 @@ body {
 a { color: var(--cyan); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* ── Nav ── */
+/* -- Nav -- */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -61,7 +61,7 @@ nav {
 }
 .nav-links a:hover { color: var(--white); text-decoration: none; }
 
-/* ── Hero ── */
+/* -- Hero -- */
 .hero {
   min-height: 100vh;
   display: flex; flex-direction: column;
@@ -129,7 +129,7 @@ nav {
 }
 .btn-secondary:hover { border-color: var(--cyan); color: var(--white); text-decoration: none; }
 
-/* ── Waveform Animation ── */
+/* -- Waveform Animation -- */
 .waveform-wrap {
   position: absolute; right: 0; top: 0; bottom: 0;
   width: 50vw; overflow: hidden;
@@ -143,7 +143,7 @@ nav {
 .wave-path:nth-child(2) { stroke: var(--blue); opacity: 0.6; transform: translateY(60px); }
 .wave-path:nth-child(3) { stroke: var(--amber); opacity: 0.4; transform: translateY(-40px); }
 
-/* ── Section Base ── */
+/* -- Section Base -- */
 section { padding: 100px 5vw; }
 .section-eyebrow {
   font-family: 'JetBrains Mono', monospace;
@@ -168,7 +168,7 @@ section { padding: 100px 5vw; }
   margin: 0;
 }
 
-/* ── Problem/Solution ── */
+/* -- Problem/Solution -- */
 .ps-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -194,7 +194,7 @@ section { padding: 100px 5vw; }
 .ps-card h3 { font-size: 20px; color: var(--white); margin-bottom: 12px; font-weight: 600; }
 .ps-card p { color: var(--muted); line-height: 1.7; font-size: 14px; }
 
-/* ── Biomarkers ── */
+/* -- Biomarkers -- */
 #biomarkers { background: var(--surface); }
 .bm-tabs {
   display: flex; gap: 0;
@@ -237,7 +237,7 @@ section { padding: 100px 5vw; }
   display: inline-block;
 }
 
-/* ── ML Architecture ── */
+/* -- ML Architecture -- */
 .ml-flow {
   display: flex; align-items: stretch;
   gap: 0; margin: 48px 0;
@@ -252,7 +252,7 @@ section { padding: 100px 5vw; }
 }
 .ml-stage + .ml-stage { margin-left: 12px; }
 .ml-stage::after {
-  content: '→';
+  content: '->';
   position: absolute; right: -18px; top: 50%;
   transform: translateY(-50%);
   color: var(--cyan); font-size: 16px; z-index: 1;
@@ -279,7 +279,7 @@ section { padding: 100px 5vw; }
 .formula-text span { color: var(--cyan); }
 .formula-sub { font-size: 12px; color: var(--muted); margin-top: 8px; }
 
-/* ── Hardware BOM ── */
+/* -- Hardware BOM -- */
 #hardware { background: var(--surface); }
 .bom-table {
   width: 100%; border-collapse: collapse;
@@ -311,7 +311,7 @@ section { padding: 100px 5vw; }
   color: var(--cyan); font-weight: 500;
 }
 
-/* ── Competitions ── */
+/* -- Competitions -- */
 .comp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -337,7 +337,7 @@ section { padding: 100px 5vw; }
 .comp-prize { font-size: 20px; font-weight: 700; color: var(--cyan); font-family: 'JetBrains Mono', monospace; }
 .comp-prize-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
-/* ── Proposal ── */
+/* -- Proposal -- */
 #proposal { background: var(--surface); }
 .proposal-sections {
   display: grid;
@@ -358,7 +358,7 @@ section { padding: 100px 5vw; }
 .prop-title { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
 .prop-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* ── Keywords ── */
+/* -- Keywords -- */
 .kw-cloud {
   display: flex; flex-wrap: wrap; gap: 10px;
   margin-top: 36px;
@@ -374,7 +374,7 @@ section { padding: 100px 5vw; }
 .kw.primary { border-color: rgba(0,229,204,0.4); color: var(--cyan); background: rgba(0,229,204,0.06); }
 .kw.amber { border-color: rgba(245,158,11,0.4); color: var(--amber); background: rgba(245,158,11,0.06); }
 
-/* ── Footer ── */
+/* -- Footer -- */
 footer {
   padding: 48px 5vw;
   border-top: 1px solid var(--border);
@@ -387,7 +387,7 @@ footer {
 }
 .footer-text { font-size: 12px; color: var(--muted); }
 
-/* ── Responsive ── */
+/* -- Responsive -- */
 @media (max-width: 768px) {
   .ps-grid { grid-template-columns: 1fr; }
   .ps-card + .ps-card { border-left: none; border-top: 1px solid var(--border); }
@@ -399,7 +399,7 @@ footer {
   footer { flex-direction: column; text-align: center; }
 }
 
-/* ── Scroll reveal ── */
+/* -- Scroll reveal -- */
 .reveal {
   opacity: 0; transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -430,12 +430,12 @@ footer {
     </svg>
   </div>
 
-  <div class="hero-eyebrow">DBT BioE3 D.E.S.I.G.N. Challenge · Category 2 · July 2026</div>
+  <div class="hero-eyebrow">DBT BioE3 D.E.S.I.G.N. Challenge . Category 2 . July 2026</div>
   <h1>Parkinson's screening<br>for the <span>last mile</span> of India.</h1>
-  <p class="hero-sub">A ₹1,500 multimodal biosignal wearable integrating edge-AI ensemble inference for early neuromotor screening in resource-limited settings.</p>
+  <p class="hero-sub">A Rs. 1,500 multimodal biosignal wearable integrating edge-AI ensemble inference for early neuromotor screening in resource-limited settings.</p>
   <div class="hero-stats">
     <div class="stat">
-      <span class="stat-val">₹1,500</span>
+      <span class="stat-val">Rs. 1,500</span>
       <span class="stat-label">Prototype BOM</span>
     </div>
     <div class="stat">
@@ -460,19 +460,19 @@ footer {
 <hr class="divider">
 
 <section id="problem">
-  <span class="section-eyebrow">01 · The Challenge</span>
+  <span class="section-eyebrow">01 . The Challenge</span>
   <h2 class="section-title">A diagnostic gap<br>affecting millions.</h2>
-  <p class="section-lead">Parkinson's disease remains critically under-diagnosed in India — not because of ignorance, but because of access.</p>
+  <p class="section-lead">Parkinson's disease remains critically under-diagnosed in India - not because of ignorance, but because of access.</p>
   <div class="ps-grid reveal">
     <div class="ps-card">
       <span class="ps-tag tag-problem">Problem</span>
       <h3>Specialist access is a luxury</h3>
-      <p>India has an estimated 5.8 million Parkinson's patients — a burden projected to double by 2040. Neurological screening is confined to tertiary care centres in urban India, accessible only to a fraction of patients. The majority receive diagnosis only at advanced motor impairment stages, when therapeutic intervention is significantly less effective.</p>
+      <p>India has an estimated 5.8 million Parkinson's patients - a burden projected to double by 2040. Neurological screening is confined to tertiary care centres in urban India, accessible only to a fraction of patients. The majority receive diagnosis only at advanced motor impairment stages, when therapeutic intervention is significantly less effective.</p>
     </div>
     <div class="ps-card">
       <span class="ps-tag tag-solution">Solution</span>
       <h3>ParkScreen brings screening to the field</h3>
-      <p>A low-cost wearable platform integrating multimodal biosignal sensing — acoustic voice dysphonia, kinematic motor tremor, and gait analysis — with a dual-model edge-AI ensemble. Deployable by ASHA workers and paramedics without specialist training. Zero chemical waste. No cloud dependency. Manufactured at ₹1,500.</p>
+      <p>A low-cost wearable platform integrating multimodal biosignal sensing - acoustic voice dysphonia, kinematic motor tremor, and gait analysis - with a dual-model edge-AI ensemble. Deployable by ASHA workers and paramedics without specialist training. Zero chemical waste. No cloud dependency. Manufactured at Rs. 1,500.</p>
     </div>
   </div>
 </section>
@@ -480,9 +480,9 @@ footer {
 <hr class="divider">
 
 <section id="biomarkers">
-  <span class="section-eyebrow">02 · Clinical Biomarkers</span>
+  <span class="section-eyebrow">02 . Clinical Biomarkers</span>
   <h2 class="section-title">22 validated<br>biological signals.</h2>
-  <p class="section-lead">Every biomarker is grounded in peer-reviewed clinical literature — Jitter and Shimmer thresholds from Little et al. (2007), motor parameters aligned to UPDRS Part 3.</p>
+  <p class="section-lead">Every biomarker is grounded in peer-reviewed clinical literature - Jitter and Shimmer thresholds from Little et al. (2007), motor parameters aligned to UPDRS Part 3.</p>
 
   <div class="bm-tabs">
     <button class="bm-tab active" onclick="switchTab('acoustic', this)">Acoustic</button>
@@ -492,9 +492,9 @@ footer {
 
   <div class="bm-panel active" id="tab-acoustic">
     <div class="bm-card reveal">
-      <div class="bm-abbr">F₀</div>
+      <div class="bm-abbr">F0</div>
       <div class="bm-name">Fundamental Frequency</div>
-      <div class="bm-desc">Tracks vocal pitch monotonicity — low variance indicates severe laryngeal muscle rigidity from dopaminergic neuron degeneration.</div>
+      <div class="bm-desc">Tracks vocal pitch monotonicity - low variance indicates severe laryngeal muscle rigidity from dopaminergic neuron degeneration.</div>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">Jitter</div>
@@ -511,18 +511,18 @@ footer {
     <div class="bm-card reveal">
       <div class="bm-abbr">HNR</div>
       <div class="bm-name">Harmonic-to-Noise Ratio</div>
-      <div class="bm-desc">Quantifies vocal hoarseness — reflects glottal closure completeness.</div>
-      <span class="bm-threshold">Drop below 20 dB → pathological</span>
+      <div class="bm-desc">Quantifies vocal hoarseness - reflects glottal closure completeness.</div>
+      <span class="bm-threshold">Drop below 20 dB -> pathological</span>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">NHR</div>
       <div class="bm-name">Noise-to-Harmonics Ratio</div>
-      <div class="bm-desc">Tracks noise component dominance over structural harmonics. Inverse of HNR — increases with dysphonia severity.</div>
+      <div class="bm-desc">Tracks noise component dominance over structural harmonics. Inverse of HNR - increases with dysphonia severity.</div>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">PPE</div>
       <div class="bm-name">Pitch Period Entropy</div>
-      <div class="bm-desc">Logarithmic measure of pitch coefficient variation — designed to resist natural pitch drift artifacts.</div>
+      <div class="bm-desc">Logarithmic measure of pitch coefficient variation - designed to resist natural pitch drift artifacts.</div>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">RPDE</div>
@@ -538,7 +538,7 @@ footer {
       <div class="bm-abbr">MFCCs</div>
       <div class="bm-name">Mel-Frequency Cepstral Coefficients</div>
       <div class="bm-desc">Spatial vectors mapping the mathematical shape envelope of the vocal tract.</div>
-      <span class="bm-threshold">Dimensionality: 13–26 coefficients</span>
+      <span class="bm-threshold">Dimensionality: 13-26 coefficients</span>
     </div>
   </div>
 
@@ -547,23 +547,23 @@ footer {
       <div class="bm-abbr">TDF</div>
       <div class="bm-name">Tremor Dominant Frequency</div>
       <div class="bm-desc">PSD peak isolated from IMU signal for resting tremor identification.</div>
-      <span class="bm-threshold">Clinical band: 4–6 Hz</span>
+      <span class="bm-threshold">Clinical band: 4-6 Hz</span>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">TAM</div>
       <div class="bm-name">Tremor Amplitude Magnitude</div>
-      <div class="bm-desc">Double integral of IMU linear acceleration — real-time kinetic displacement in millimetres.</div>
+      <div class="bm-desc">Double integral of IMU linear acceleration - real-time kinetic displacement in millimetres.</div>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">SE</div>
       <div class="bm-name">Spectral Entropy (IMU)</div>
-      <div class="bm-desc">Measures frequency distribution randomness — a heavy drop isolates pure rhythmic resting tremor from noise.</div>
+      <div class="bm-desc">Measures frequency distribution randomness - a heavy drop isolates pure rhythmic resting tremor from noise.</div>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">BI</div>
       <div class="bm-name">Bradykinesia Index</div>
       <div class="bm-desc">Amplitude decay over consecutive movement cycles using exponential decay model.</div>
-      <span class="bm-threshold">A(t) = A₀ · e^(−λt)</span>
+      <span class="bm-threshold">A(t) = A0 * e^(-lt)</span>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">RI</div>
@@ -573,19 +573,19 @@ footer {
     <div class="bm-card reveal">
       <div class="bm-abbr">GC</div>
       <div class="bm-name">Gait Cadence</div>
-      <div class="bm-desc">Step rate tracking — significant deviations signal locomotion impairment.</div>
-      <span class="bm-threshold">Normal: 100–115 steps/min</span>
+      <div class="bm-desc">Step rate tracking - significant deviations signal locomotion impairment.</div>
+      <span class="bm-threshold">Normal: 100-115 steps/min</span>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">STV</div>
       <div class="bm-name">Step Time Variability</div>
-      <div class="bm-desc">Standard deviation (σ) of consecutive heel-strike intervals — maps locomotor coordination failure.</div>
+      <div class="bm-desc">Standard deviation (s) of consecutive heel-strike intervals - maps locomotor coordination failure.</div>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">FoG</div>
       <div class="bm-name">Freeze of Gait Ratio</div>
       <div class="bm-desc">Spectral energy ratio between freeze band and normal locomotor band.</div>
-      <span class="bm-threshold">Freeze: 3–8 Hz · Locomotor: 0.5–3 Hz</span>
+      <span class="bm-threshold">Freeze: 3-8 Hz . Locomotor: 0.5-3 Hz</span>
     </div>
   </div>
 
@@ -612,13 +612,13 @@ footer {
       <div class="bm-abbr">AWL</div>
       <div class="bm-name">Analysis Window Length</div>
       <div class="bm-desc">Fixed processing matrix size with continuous horizontal overlap.</div>
-      <span class="bm-threshold">Window: 25 ms · Overlap: 10 ms</span>
+      <span class="bm-threshold">Window: 25 ms . Overlap: 10 ms</span>
     </div>
     <div class="bm-card reveal">
       <div class="bm-abbr">ELB</div>
       <div class="bm-name">Edge Latency Budget</div>
       <div class="bm-desc">Real-time on-device binary classification inference execution cap.</div>
-      <span class="bm-threshold">Max latency: &lt; 200–500 ms</span>
+      <span class="bm-threshold">Max latency: &lt; 200-500 ms</span>
     </div>
   </div>
 </section>
@@ -626,7 +626,7 @@ footer {
 <hr class="divider">
 
 <section id="ml">
-  <span class="section-eyebrow">03 · ML Architecture</span>
+  <span class="section-eyebrow">03 . ML Architecture</span>
   <h2 class="section-title">Dual-model ensemble<br>with temporal fusion.</h2>
   <p class="section-lead">Two fundamentally different classifiers run in parallel on the same feature vector. Their outputs collapse into a single clinically interpretable risk score, smoothed across time.</p>
 
@@ -639,43 +639,43 @@ footer {
     <div class="ml-stage">
       <div class="ml-stage-label">Model 1</div>
       <div class="ml-stage-title">Logistic Regression</div>
-      <div class="ml-stage-detail">Probabilistic, clinically interpretable. Outputs P_LR ∈ [0,1]</div>
+      <div class="ml-stage-detail">Probabilistic, clinically interpretable. Outputs P_LR in [0,1]</div>
     </div>
     <div class="ml-stage">
       <div class="ml-stage-label">Model 2</div>
       <div class="ml-stage-title">Linear SVM</div>
-      <div class="ml-stage-detail">Margin-based. Validated on Oxford dataset ~91% accuracy. Outputs P_SVM ∈ [0,1]</div>
+      <div class="ml-stage-detail">Margin-based. Validated on Oxford dataset ~91% accuracy. Outputs P_SVM in [0,1]</div>
     </div>
     <div class="ml-stage">
       <div class="ml-stage-label">Fusion</div>
       <div class="ml-stage-title">Weighted Collapse</div>
-      <div class="ml-stage-detail">α optimised on validation cohort. Rolling temporal buffer smoothing</div>
+      <div class="ml-stage-detail">alpha optimised on validation cohort. Rolling temporal buffer smoothing</div>
     </div>
     <div class="ml-stage">
       <div class="ml-stage-label">Output</div>
       <div class="ml-stage-title">Risk Score</div>
-      <div class="ml-stage-detail">Low / Moderate / High — aligned with UPDRS Part 3</div>
+      <div class="ml-stage-detail">Low / Moderate / High - aligned with UPDRS Part 3</div>
     </div>
   </div>
 
   <div class="ml-formula reveal">
     <div class="formula-label">Fusion Formula</div>
-    <div class="formula-text">Risk_Score = <span>α</span> · P_LR + (1 − <span>α</span>) · P_SVM</div>
-    <div class="formula-sub">where α is empirically optimised on the Indian patient validation cohort</div>
+    <div class="formula-text">Risk_Score = <span>alpha</span> * P_LR + (1 - <span>alpha</span>) * P_SVM</div>
+    <div class="formula-sub">where alpha is empirically optimised on the Indian patient validation cohort</div>
   </div>
 
   <div class="ml-formula reveal" style="border-left-color: var(--amber);">
     <div class="formula-label">Bradykinesia Decay Model</div>
-    <div class="formula-text">A(t) = <span style="color:var(--amber)">A₀</span> · e^(−λt)</div>
-    <div class="formula-sub">Amplitude decay over consecutive movement cycles — exponential model</div>
+    <div class="formula-text">A(t) = <span style="color:var(--amber)">A0</span> * e^(-lt)</div>
+    <div class="formula-sub">Amplitude decay over consecutive movement cycles - exponential model</div>
   </div>
 </section>
 
 <hr class="divider">
 
 <section id="hardware">
-  <span class="section-eyebrow">04 · Hardware Stack</span>
-  <h2 class="section-title">₹1,500 prototype.<br>Scale ready.</h2>
+  <span class="section-eyebrow">04 . Hardware Stack</span>
+  <h2 class="section-title">Rs. 1,500 prototype.<br>Scale ready.</h2>
   <p class="section-lead">Every component commercially available in India. No imported consumables. No cloud dependency. Deployable without power grid or internet.</p>
 
   <table class="bom-table reveal">
@@ -684,19 +684,19 @@ footer {
         <th>Component</th>
         <th>Spec</th>
         <th>Role</th>
-        <th>Cost (₹)</th>
+        <th>Cost (Rs.)</th>
       </tr>
     </thead>
     <tbody>
       <tr><td>ESP32 DevKit</td><td>Dual-core 240MHz, 520KB SRAM</td><td>Main MCU + edge inference</td><td class="cost-val">275</td></tr>
-      <tr><td>MPU6050</td><td>6-axis IMU, 50–100 Hz</td><td>Tremor + gait capture</td><td class="cost-val">100</td></tr>
+      <tr><td>MPU6050</td><td>6-axis IMU, 50-100 Hz</td><td>Tremor + gait capture</td><td class="cost-val">100</td></tr>
       <tr><td>INMP441 Mic</td><td>MEMS, 16 kHz / 44.1 kHz</td><td>Acoustic biosignal capture</td><td class="cost-val">175</td></tr>
       <tr><td>LiPo Battery + TP4056</td><td>3.7V, charging module</td><td>Portable power</td><td class="cost-val">200</td></tr>
       <tr><td>Enclosure</td><td>3D printed / acrylic</td><td>Wearable housing</td><td class="cost-val">300</td></tr>
       <tr><td>PCB + Ancillaries</td><td>Jumper wires, connectors</td><td>Integration</td><td class="cost-val">150</td></tr>
-      <tr><td>OV2640 Camera</td><td>Optional — oculomotor analysis</td><td>Additional biomarker pathway</td><td class="cost-val">300–450</td></tr>
-      <tr class="bom-total"><td colspan="3">Total Prototype BOM Cost (with camera)</td><td class="cost-val">~₹1,500</td></tr>
-      <tr class="bom-total" style="background: rgba(0,229,204,0.05);"><td colspan="3">Target DBT Production Cost Target Goal (Scaled)</td><td class="cost-val" style="color: var(--white);">₹800–₹1,200</td></tr>
+      <tr><td>OV2640 Camera</td><td>Optional - oculomotor analysis</td><td>Additional biomarker pathway</td><td class="cost-val">300-450</td></tr>
+      <tr class="bom-total"><td colspan="3">Total Prototype BOM Cost (with camera)</td><td class="cost-val">~Rs. 1,500</td></tr>
+      <tr class="bom-total" style="background: rgba(0,229,204,0.05);"><td colspan="3">Target DBT Production Cost Target Goal (Scaled)</td><td class="cost-val" style="color: var(--white);">Rs. 800-1,200</td></tr>
     </tbody>
   </table>
 </section>
@@ -704,16 +704,16 @@ footer {
 <hr class="divider">
 
 <section id="metrics">
-  <span class="section-eyebrow">05 · Evaluation & Performance Metrics</span>
+  <span class="section-eyebrow">05 . Evaluation & Performance Metrics</span>
   <h2 class="section-title">Clinically structured.<br>Validation-ready.</h2>
-  <p class="section-lead">All metrics evaluate screening-level clinical utility and signal consistency — not diagnostic accuracy. ParkScreen is a decision-support tool, not a diagnostic replacement.</p>
+  <p class="section-lead">All metrics evaluate screening-level clinical utility and signal consistency - not diagnostic accuracy. ParkScreen is a decision-support tool, not a diagnostic replacement.</p>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:48px;">
     <div class="bm-card reveal" style="border-left:3px solid var(--cyan);">
       <div class="bm-abbr">r</div>
       <div class="bm-name">Clinical Correlation (Spearman/Pearson)</div>
       <div class="bm-desc">Biomedical validation hook. Tracks correlation between composite biomarker indicators (TSI, MSI, VSI) and golden-standard clinical UPDRS Part III motor scores.</div>
-      <span class="bm-threshold">Target: r &gt; 0.6 strong · 0.4–0.6 early prototype</span>
+      <span class="bm-threshold">Target: r &gt; 0.6 strong . 0.4-0.6 early prototype</span>
     </div>
 
     <div class="bm-card reveal" style="border-left:3px solid var(--cyan);">
@@ -727,7 +727,7 @@ footer {
       <div class="bm-abbr">ICC</div>
       <div class="bm-name">Test-Retest Reliability</div>
       <div class="bm-desc">Intraclass Correlation Coefficient measures cross-session output stability when identical human subjects are recorded multiple times under variable edge environments.</div>
-      <span class="bm-threshold">Target: ICC &gt; 0.75 → Good Stability</span>
+      <span class="bm-threshold">Target: ICC &gt; 0.75 -> Good Stability</span>
     </div>
     <div class="bm-card reveal" style="border-left:3px solid var(--cyan);">
       <div class="bm-abbr">CV%</div>
@@ -754,14 +754,14 @@ footer {
       <div class="bm-abbr">RAM / PWR</div>
       <div class="bm-name">On-Device Edge MicroML Bounds</div>
       <div class="bm-desc">Hardware constraints verification on the ESP32 chip. Hard target restrictions ensure continuous workflow execution under battery deployment scenarios.</div>
-      <span class="bm-threshold">Model &lt; 100 KB · Latency &lt; 200–500ms</span>
+      <span class="bm-threshold">Model &lt; 100 KB . Latency &lt; 200-500ms</span>
     </div>
 
     <div class="bm-card reveal" style="border-left:3px solid var(--blue);">
       <div class="bm-abbr">CEM</div>
       <div class="bm-name">Cost Efficiency Scale Factor</div>
       <div class="bm-desc">Calculates macro financial scalability. Targets low bill-of-materials and driving transactional screening session operation costs down near absolute zero.</div>
-      <span class="bm-threshold">Target Production &lt; ₹800–₹1,200</span>
+      <span class="bm-threshold">Target Production &lt; Rs. 800-1,200</span>
     </div>
 
     <div class="bm-card reveal" style="border-left:3px solid var(--amber);">
@@ -782,7 +782,7 @@ footer {
       <div class="bm-abbr">CAO / FDR</div>
       <div class="bm-name">Confidence-Aware False Diagnosis Avoidance</div>
       <div class="bm-desc">Pairs every output risk index with a strict confidence tier. Flags uncertain low-confidence parameters explicitly to track human neurologist override rates.</div>
-      <span class="bm-threshold">Humility First — Override Friendly Architecture</span>
+      <span class="bm-threshold">Humility First - Override Friendly Architecture</span>
     </div>
 
     <div class="bm-card reveal" style="border-left:3px solid var(--white);">
@@ -802,45 +802,45 @@ footer {
 
   <div class="ml-formula reveal" style="margin-top:32px;">
     <div class="formula-label">Key Clinical Positioning (DBT REVIEW REQUIREMENT)</div>
-    <div class="formula-text" style="font-size:14px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-style:italic;">“All metrics are designed to evaluate <span>screening-level clinical utility</span> and signal consistency, not diagnostic accuracy.”</div>
-    <div class="formula-sub">ParkScreen flags abnormalities to offload overloaded medical pipelines — it does not replace expert definitive diagnosis.</div>
+    <div class="formula-text" style="font-size:14px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-style:italic;">"All metrics are designed to evaluate <span>screening-level clinical utility</span> and signal consistency, not diagnostic accuracy."</div>
+    <div class="formula-sub">ParkScreen flags abnormalities to offload overloaded medical pipelines - it does not replace expert definitive diagnosis.</div>
   </div>
 </section>
 
 <hr class="divider">
 
 <section id="competition">
-  <span class="section-eyebrow">06 · Competition Roadmap</span>
+  <span class="section-eyebrow">06 . Competition Roadmap</span>
   <h2 class="section-title">Submit once.<br>Then submit again.</h2>
-  <p class="section-lead">BioE3 is the priority. The same core concept adapts across four national competitions — different funders, different framing emphasis.</p>
+  <p class="section-lead">BioE3 is the priority. The same core concept adapts across four national competitions - different funders, different framing emphasis.</p>
 
   <div class="comp-grid">
     <div class="comp-card primary reveal">
       <span class="comp-priority priority-1">Priority 1</span>
       <div class="comp-name">DBT BioE3 D.E.S.I.G.N.</div>
       <div class="comp-deadline">Deadline: July 20, 2026</div>
-      <div class="comp-prize">₹1 Lakh</div>
-      <div class="comp-prize-label">+ ₹25 Lakh RDI grant eligibility (Round 2)</div>
+      <div class="comp-prize">Rs. 1 Lakh</div>
+      <div class="comp-prize-label">+ Rs. 25 Lakh RDI grant eligibility (Round 2)</div>
     </div>
     <div class="comp-card reveal">
       <span class="comp-priority priority-rest">Priority 2</span>
       <div class="comp-name">BIRAC EYUVA</div>
       <div class="comp-deadline">Rolling applications</div>
-      <div class="comp-prize">Up to ₹50 Lakh</div>
+      <div class="comp-prize">Up to Rs. 50 Lakh</div>
       <div class="comp-prize-label">Youth-led biotech innovation grant</div>
     </div>
     <div class="comp-card reveal">
       <span class="comp-priority priority-rest">Priority 3</span>
       <div class="comp-name">DST INSPIRE</div>
-      <div class="comp-deadline">Opens Aug–Sep 2026</div>
-      <div class="comp-prize">₹25–50 Lakh</div>
+      <div class="comp-deadline">Opens Aug-Sep 2026</div>
+      <div class="comp-prize">Rs. 25-50 Lakh</div>
       <div class="comp-prize-label">Science impact + healthcare gap</div>
     </div>
     <div class="comp-card reveal">
       <span class="comp-priority priority-rest">Priority 4</span>
       <div class="comp-name">NITI Deep Tech Challenge</div>
       <div class="comp-deadline">Q3 2026</div>
-      <div class="comp-prize">₹10–25 Lakh</div>
+      <div class="comp-prize">Rs. 10-25 Lakh</div>
       <div class="comp-prize-label">Deep tech + scalability focus</div>
     </div>
   </div>
@@ -849,9 +849,9 @@ footer {
 <hr class="divider">
 
 <section id="proposal">
-  <span class="section-eyebrow">07 · BioE3 Proposal</span>
+  <span class="section-eyebrow">07 . BioE3 Proposal</span>
   <h2 class="section-title">1,498 words.<br>Six sections.</h2>
-  <p class="section-lead">Written to DBT BioE3 evaluation criteria — biological mechanism first, engineering second.</p>
+  <p class="section-lead">Written to DBT BioE3 evaluation criteria - biological mechanism first, engineering second.</p>
 
   <div class="proposal-sections">
     <div class="prop-card reveal">
@@ -862,7 +862,7 @@ footer {
     <div class="prop-card reveal">
       <div class="prop-num">02</div>
       <div class="prop-title">Design Logic</div>
-      <div class="prop-desc">Biological mechanism — laryngeal neurodegeneration pathway, IMU kinematic biosignals, dual-model fusion architecture.</div>
+      <div class="prop-desc">Biological mechanism - laryngeal neurodegeneration pathway, IMU kinematic biosignals, dual-model fusion architecture.</div>
     </div>
     <div class="prop-card reveal">
       <div class="prop-num">03</div>
@@ -877,12 +877,12 @@ footer {
     <div class="prop-card reveal">
       <div class="prop-num">05</div>
       <div class="prop-title">Sustainability & Impact</div>
-      <div class="prop-desc">20–30 screenings/unit/day, 10,000 unit national deployment scenario, extensible to other neurological conditions.</div>
+      <div class="prop-desc">20-30 screenings/unit/day, 10,000 unit national deployment scenario, extensible to other neurological conditions.</div>
     </div>
     <div class="prop-card reveal">
       <div class="prop-num">06</div>
       <div class="prop-title">Novelty</div>
-      <div class="prop-desc">Multimodal integration, dual-model temporal ensemble, Atmanirbhar design — three axes of differentiation.</div>
+      <div class="prop-desc">Multimodal integration, dual-model temporal ensemble, Atmanirbhar design - three axes of differentiation.</div>
     </div>
   </div>
 
@@ -919,12 +919,12 @@ footer {
 
 <footer>
   <span class="footer-logo">ParkScreen /</span>
-  <span class="footer-text">DBT BioE3 D.E.S.I.G.N. Challenge · Category 2 · July 2026 Cycle</span>
-  <span class="footer-text" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);">₹1,500 · 22 biomarkers · &lt;200ms</span>
+  <span class="footer-text">DBT BioE3 D.E.S.I.G.N. Challenge . Category 2 . July 2026 Cycle</span>
+  <span class="footer-text" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);">Rs. 1,500 . 22 biomarkers . &lt;200ms</span>
 </footer>
 
 <script>
-/* ── Tab switching ── */
+/* -- Tab switching -- */
 function switchTab(id, btn) {
   document.querySelectorAll('.bm-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.bm-tab').forEach(b => b.classList.remove('active'));
@@ -932,13 +932,13 @@ function switchTab(id, btn) {
   btn.classList.add('active');
 }
 
-/* ── Scroll reveal ── */
+/* -- Scroll reveal -- */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* ── Animated waveform ── */
+/* -- Animated waveform -- */
 function buildWave(id, amp, freq, phase, yOffset) {
   const w = 800, h = 600;
   let d = `M 0 ${h/2 + yOffset}`;
@@ -963,7 +963,7 @@ function animateWaves() {
 }
 animateWaves();
 
-/* ── Reduced motion ── */
+/* -- Reduced motion -- */
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   cancelAnimationFrame(animateWaves);
 }
